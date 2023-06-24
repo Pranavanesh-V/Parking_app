@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/Head2"
+        android:layout_width="363dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-5sp"
+        android:text="@string/Heading2"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/Desc2"
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/Desc1"
+        android:textColor="@color/black1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/Head2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Head2"
+        app:layout_constraintTop_toBottomOf="@+id/Head2"
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/pages2"
+        android:layout_width="261dp"
+        android:layout_height="282dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839"
+        app:srcCompat="@drawable/pg2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

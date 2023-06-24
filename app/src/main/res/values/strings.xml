@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">trail2</string>
+    <string name="Heading1">Create QR\nfor your Vehicle</string>
+    <string name="Heading2">Download the\nQR you made</string>
+    <string name="Heading3">Print QR</string>
+    <string name="Heading4">And you can\nalways edit your QR</string>
+    <string name="Heading5">Stick it on \nyour Vehicle</string>
+    <string name="Skip">Skip-></string>
+    <string name="Next">Next</string>
+    <string name="get_started">Get Started</string>
+    <string name="Desc1">Efforts to make the zoo experience more enjoyable for everyone.</string>
+    <string name="todo">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="login">Login</string>
+    <string name="hi_ignition">Hi, Ignition</string>
+    <string name="gud_evening">Good Evening</string>
+    <string name="Student_Profile">Student Profile</string>
+    <string name="Name">*Name</string>
+    <string name="Phone_Number">*Phone Number</string>
+    <string name="Roll_No">*Roll No</string>
+    <string name="we">Mandatory* \nWe won\'t spam you as often as we\'d like.</string>
+    <string name="Generate">Generate</string>
+    <string name="Vehicle_Name">*Vehicle Name</string>
+    <string name="Vehicle_Number">*Vehicle Number</string>
+    <string name="Department_Name">*Department Name</string>
+    <string name="Bike_Info">Bike Info</string>
+    <string name="Your_Department">Your Department</string>
+    <string name="pop">Bruh! Don\'t skip, Read the \n   karuthu we\'re saying\n</string>
+    <string name="download">Download QR</string>
+    <string name="click">click</string>
+    <string name="pop1">Sorry, we have a strict\n \'nope\' policy here.\n</string>
+    <string name="N">Name</string>
+    <string name="dark">    Switch to dark Mode</string>
+    <string name="log_out">Log Out</string>
+    <string name="jk">TextView</string>
+    <string name="kj4">TextView</string>
+
+
+</resources>

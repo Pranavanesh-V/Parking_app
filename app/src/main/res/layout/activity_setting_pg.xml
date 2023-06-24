@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting_pg">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/N"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="348dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/switch_border"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:lineSpacingExtra="-3sp"
+        android:onClick="check"
+        android:padding="20dp"
+        android:text="@string/dark"
+        android:textColor="#3555EB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/Log_out"
+        android:layout_width="350dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/log_out"
+        android:textColor="#EB3535"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="-3sp"
+        android:gravity="center_horizontal|center"
+        android:background="@drawable/switch_border1"
+        app:layout_constraintEnd_toEndOf="@+id/switch1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="357dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Log_out"
+        app:layout_constraintStart_toStartOf="@+id/Log_out"
+        app:layout_constraintTop_toBottomOf="@+id/Log_out"
+        app:layout_constraintVertical_bias="0.012" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

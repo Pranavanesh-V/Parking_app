@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/page71.Trail2"
+    tools:context=".page8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_inputLay1"
+            style="@style/page8.Trail2"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/Name"
+            app:helperText="Mandatory*"
+            app:helperTextTextColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/head3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/head3"
+            app:layout_constraintTop_toBottomOf="@+id/head3"
+            app:layout_constraintVertical_bias="0.024">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:autofillHints=""
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="145dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_inputLay2"
+            style="@style/page8.Trail2"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:helperText="@string/we"
+            app:helperTextTextColor="@color/blue"
+            app:hintEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txt_inputLay1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_inputLay1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_inputLay1"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextSizeCheck">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:autofillHints=""
+            android:hint="@string/Phone_Number"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/head3"
+            android:layout_width="294dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="76dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/Student_Profile"
+            android:textColor="@color/black"
+            android:textSize="29sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/img_btn1"
+            android:layout_width="116dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="612dp"
+            android:background="@drawable/student1"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toStartOf="@+id/img_btn2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/img_btn2"
+            android:layout_width="116dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="612dp"
+            android:background="@drawable/bike1"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toStartOf="@+id/img_btn3"
+            app:layout_constraintStart_toEndOf="@+id/img_btn1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:enabled="false"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/img_btn3"
+            android:layout_width="116dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="612dp"
+            android:background="@drawable/department1"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:enabled="false"
+            app:layout_constraintStart_toEndOf="@+id/img_btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Generate"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_main_activity"
+            android:text="@string/Generate"
+            android:textColor="@color/white"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/img_btn3"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@+id/img_btn1"
+            app:layout_constraintTop_toBottomOf="@+id/img_btn2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize,VisualLintBounds" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_inputLay3"
+            style="@style/page8.Trail2"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/Vehicle_Name"
+            android:visibility="gone"
+            app:helperText="Mandatory*"
+            app:helperTextTextColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/head3"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="@+id/head3"
+            app:layout_constraintTop_toBottomOf="@+id/head3"
+            app:layout_constraintVertical_bias="0.026">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:autofillHints=""
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_inputLay4"
+            style="@style/page8.Trail2"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:helperText="@string/we"
+            app:helperTextTextColor="@color/blue"
+            app:hintEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txt_inputLay3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_inputLay3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_inputLay3"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextSizeCheck">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:autofillHints=""
+                android:hint="@string/Vehicle_Number"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="#000000"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_inputLay5"
+            style="@style/page8.Trail2"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/Department_Name"
+            android:visibility="gone"
+            app:helperText="Mandatory*"
+            app:helperTextTextColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/head3"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="@+id/head3"
+            app:layout_constraintTop_toBottomOf="@+id/head3"
+            app:layout_constraintVertical_bias="0.026">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:autofillHints=""
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="33dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
