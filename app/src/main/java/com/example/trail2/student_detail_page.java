@@ -4,16 +4,18 @@ package com.example.trail2;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -24,15 +26,22 @@ public class student_detail_page extends AppCompatActivity {
     Button img_btn1,img_btn2,img_btn3,generate,back;
     TextView head;
     String username, pho_no,department,v_name,v_no;
+    private final boolean isKeyboardVisible = false;
+    int keyboardHeight;
+    private final ConstraintSet originalConstraints = new ConstraintSet();
+    ConstraintLayout constraint;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_detail_page);
+        constraint=findViewById(R.id.page_8);
 
 
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        originalConstraints.clone(constraint);
+
 
 
         img_btn1=findViewById(R.id.img_btn1);
@@ -176,6 +185,95 @@ public class student_detail_page extends AppCompatActivity {
         });
 
         back.setOnClickListener(v -> finish());
+
+        setupKeyboardVisibilityListener();
     }
+
+    private void setupKeyboardVisibilityListener() {
+        final View rootView = findViewById(android.R.id.content);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+            Rect r = new Rect();
+            rootView.getWindowVisibleDisplayFrame(r);
+            int screenHeight = rootView.getRootView().getHeight();
+
+            int keyboardHeight = screenHeight - r.bottom;
+            boolean isKeyboardVisible = keyboardHeight > screenHeight * 0.15;
+
+            if (isKeyboardVisible) {
+                // Keyboard is visible
+                // TODO: Add your code to handle keyboard visibility
+                updateMarginsForElements();
+            } else {
+                // Keyboard is not visible
+                // TODO: Add your code to handle keyboard visibility
+                originalCon();
+            }
+
+            // Store the current height for comparison in the next call
+            int previousHeight = r.bottom;
+
+            // Remove the listener if you no longer need to monitor keyboard visibility
+            // rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        });
+    }
+
+
+
+
+
+
+
+    private void updateMarginsForElements() {
+        ConstraintLayout.LayoutParams layoutParams1 = (ConstraintLayout.LayoutParams) img_btn1.getLayoutParams();
+        ConstraintLayout.LayoutParams layoutParams2 = (ConstraintLayout.LayoutParams) img_btn2.getLayoutParams();
+        ConstraintLayout.LayoutParams layoutParams3 = (ConstraintLayout.LayoutParams) img_btn3.getLayoutParams();
+
+
+        int leftMargin = 16; // Replace with your desired left margin value in pixels
+        int topMargin = 850; // Replace with your desired top margin value in pixels
+        int rightMargin = 16; // Replace with your desired right margin value in pixels
+        int bottomMargin = isKeyboardVisible ? keyboardHeight : 8; // Replace with your desired bottom margin value when keyboard is visible
+
+        int leftMargin2 = 160; // Replace with your desired left margin value in pixels
+        int rightMargin2 = 160;
+
+        int leftMargin3 = 320; // Replace with your desired left margin value in pixels
+        int rightMargin3 = 16;
+
+        layoutParams1.setMargins(leftMargin, topMargin, rightMargin, bottomMargin);
+        layoutParams2.setMargins(leftMargin2, topMargin, rightMargin2, bottomMargin);
+        layoutParams3.setMargins(leftMargin3, topMargin, rightMargin3, bottomMargin);
+        img_btn1.setLayoutParams(layoutParams1);
+        img_btn2.setLayoutParams(layoutParams2);
+        img_btn3.setLayoutParams(layoutParams3);
+
+    }
+
+    private void originalCon() {
+        ConstraintLayout.LayoutParams layoutParams1 = (ConstraintLayout.LayoutParams) img_btn1.getLayoutParams();
+        ConstraintLayout.LayoutParams layoutParams2 = (ConstraintLayout.LayoutParams) img_btn2.getLayoutParams();
+        ConstraintLayout.LayoutParams layoutParams3 = (ConstraintLayout.LayoutParams) img_btn3.getLayoutParams();
+
+
+        int leftMargin = 16; // Replace with your desired left margin value in pixels
+        int topMargin = 1600; // Replace with your desired top margin value in pixels
+        int rightMargin = 16; // Replace with your desired right margin value in pixels
+        int bottomMargin = isKeyboardVisible ? keyboardHeight : 8; // Replace with your desired bottom margin value when keyboard is visible
+
+        int leftMargin2 = 160; // Replace with your desired left margin value in pixels
+        int rightMargin2 = 160;
+
+        int leftMargin3 = 320; // Replace with your desired left margin value in pixels
+        int rightMargin3 = 16;
+
+        layoutParams1.setMargins(leftMargin, topMargin, rightMargin, bottomMargin);
+        layoutParams2.setMargins(leftMargin2, topMargin, rightMargin2, bottomMargin);
+        layoutParams3.setMargins(leftMargin3, topMargin, rightMargin3, bottomMargin);
+        img_btn1.setLayoutParams(layoutParams1);
+        img_btn2.setLayoutParams(layoutParams2);
+        img_btn3.setLayoutParams(layoutParams3);
+
+    }
+
 
 }

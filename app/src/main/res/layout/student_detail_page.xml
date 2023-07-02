@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/page_8"
     android:theme="@style/page71.Trail2"
     tools:context=".student_detail_page">
 
@@ -25,16 +25,16 @@
             app:layout_constraintTop_toBottomOf="@+id/head3"
             app:layout_constraintVertical_bias="0.024">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:autofillHints=""
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:textColor="@color/black"
-            tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="145dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:autofillHints=""
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck"
+                    tools:layout_editor_absoluteX="17dp"
+                    tools:layout_editor_absoluteY="145dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -54,16 +54,16 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="TextSizeCheck">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:autofillHints=""
-            android:hint="@string/Phone_Number"
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:textColor="@color/black"
-            android:textColorHint="#000000"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:autofillHints=""
+                    android:hint="@string/Phone_Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textColorHint="#000000"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -85,10 +85,13 @@
             android:id="@+id/img_btn1"
             android:layout_width="116dp"
             android:layout_height="111dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="612dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/student1"
             android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toStartOf="@+id/img_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="DuplicateSpeakableTextCheck" />
@@ -100,10 +103,11 @@
             android:layout_marginTop="612dp"
             android:background="@drawable/bike1"
             android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toStartOf="@+id/img_btn3"
-            app:layout_constraintStart_toEndOf="@+id/img_btn1"
-            app:layout_constraintTop_toTopOf="parent"
             android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
@@ -113,9 +117,10 @@
             android:layout_marginTop="612dp"
             android:background="@drawable/department1"
             android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toEndOf="parent"
             android:enabled="false"
-            app:layout_constraintStart_toEndOf="@+id/img_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -124,9 +129,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_main_activity"
+            android:enabled="false"
             android:text="@string/Generate"
             android:textColor="@color/white"
-            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/img_btn3"
             app:layout_constraintHorizontal_bias="0.466"
@@ -153,14 +158,14 @@
             app:layout_constraintTop_toBottomOf="@+id/head3"
             app:layout_constraintVertical_bias="0.026">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:autofillHints=""
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:textColor="@color/black"
-                tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:autofillHints=""
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -182,16 +187,16 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="TextSizeCheck">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:autofillHints=""
-                android:hint="@string/Vehicle_Number"
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:textColor="@color/black"
-                android:textColorHint="#000000"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:autofillHints=""
+                    android:hint="@string/Vehicle_Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textColorHint="#000000"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -212,14 +217,14 @@
             app:layout_constraintTop_toBottomOf="@+id/head3"
             app:layout_constraintVertical_bias="0.026">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:autofillHints=""
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:textColor="@color/black"
-                tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:autofillHints=""
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
