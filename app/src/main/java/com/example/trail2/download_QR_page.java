@@ -6,21 +6,16 @@ import static android.widget.Toast.makeText;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.zxing.BarcodeFormat;
@@ -32,23 +27,19 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class page9 extends AppCompatActivity {
+public class download_QR_page extends AppCompatActivity {
 
     ImageView qr;
     Button download;
-    private static final int REQUEST_CODE_SAVE_IMAGE = 1;
 
 
-    private static final int REQUEST_CODE_CREATE_DIRECTORY = 1;
-    private static final String PREFS_NAME = "MyPrefsFile";
-    private static final String FUNCTION_EXECUTED_KEY = "functionExecuted";
     public static Bitmap bitmap = null;
     String v_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page9);
+        setContentView(R.layout.download_qr_page);
         qr=findViewById(R.id.qr);
         download=findViewById(R.id.Download);
 
@@ -63,7 +54,7 @@ public class page9 extends AppCompatActivity {
         String department=intent.getStringExtra("dept");
 
         String text=u_name+"\n"+ph_no+"\n"+v_name+"\n"+v_no+"\n"+department;
-        makeText(page9.this,"Successfully generated",Toast.LENGTH_LONG).show();
+        makeText(download_QR_page.this,"Successfully generated",Toast.LENGTH_LONG).show();
 
         //encrypt.gen(u_name,ph_no,v_name,v_no,department);
         String encrypt=Encryption.encrypt(text);
@@ -72,25 +63,11 @@ public class page9 extends AppCompatActivity {
 
 
 
-        download.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        download.setOnClickListener(v -> {
 
+            saveImageToDirectory(bitmap);
+            finish();
 
-                /*boolean result=saveImageToDownloads(v_name);
-                if (!result)
-                {
-                    Toast.makeText(page9.this,"failed2",Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(page9.this,"done",Toast.LENGTH_LONG).show();
-                }*/
-
-                saveImageToDirectory(bitmap);
-                finish();
-
-            }
         });
 
     }

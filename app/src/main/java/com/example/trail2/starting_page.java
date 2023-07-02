@@ -18,7 +18,7 @@ public class starting_page extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             // Code to start the intent
-            Intent intent = new Intent(starting_page.this, MainActivity.class);
+            Intent intent = new Intent(starting_page.this, intro_page.class);
             startActivity(intent);
         }, 1200); // Delay in milliseconds (1.20 seconds in this example)
 

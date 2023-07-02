@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class page8 extends AppCompatActivity {
+public class student_detail_page extends AppCompatActivity {
 
 
     TextInputLayout textInputLayout1, textInputLayout2,textInputLayout3,textInputLayout4,textInputLayout5;
@@ -29,7 +29,7 @@ public class page8 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page8);
+        setContentView(R.layout.student_detail_page);
 
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
@@ -165,7 +165,7 @@ public class page8 extends AppCompatActivity {
 
 
         generate.setOnClickListener(v -> {
-            Intent intent=new Intent(page8.this, page9.class);
+            Intent intent=new Intent(student_detail_page.this, download_QR_page.class);
             intent.putExtra("username",username);
             intent.putExtra("phone_number",pho_no);
             intent.putExtra("Vehicle_name",v_name);

@@ -27,20 +27,20 @@
             android:name=".setting_pg"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".intro_page"
             android:exported="false" />
         <activity
-            android:name=".page9"
+            android:name=".download_QR_page"
             android:exported="false" />
         <activity
-            android:name=".page8"
+            android:name=".student_detail_page"
             android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
-            android:name=".page7"
+            android:name=".options_page"
             android:exported="false" />
         <activity
-            android:name=".page6"
+            android:name=".login_page"
             android:exported="false" />
         <activity
             android:name=".starting_page"

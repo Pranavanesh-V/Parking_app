@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/page_8"
     android:theme="@style/page71.Trail2"
-    tools:context=".page8">
+    tools:context=".student_detail_page">
 
 
         <com.google.android.material.textfield.TextInputLayout

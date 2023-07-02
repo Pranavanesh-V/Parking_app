@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
-public class page7 extends AppCompatActivity {
+public class options_page extends AppCompatActivity {
 
     TextView[] dots;
     ViewPageAdapter2 viewPagerAdapter;
@@ -34,7 +33,7 @@ public class page7 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page7);
+        setContentView(R.layout.options_page);
 
         btn1=findViewById(R.id.button2);
         btn2=findViewById(R.id.button3);
@@ -52,58 +51,43 @@ public class page7 extends AppCompatActivity {
         setupIndicator(0);
         mSlideViewPager1.addOnPageChangeListener(viewListener);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(page7.this,com.example.trail2.page8.class);
-                startActivity(intent);
+        btn1.setOnClickListener(v -> {
+            Intent intent=new Intent(options_page.this, student_detail_page.class);
+            startActivity(intent);
 
-            }
         });
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(page7.this,com.example.trail2.how_works.class);
-                startActivity(intent);
+        btn4.setOnClickListener(v -> {
+            Intent intent=new Intent(options_page.this, how_works.class);
+            startActivity(intent);
 
-            }
         });
 
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(page7.this, setting_pg.class);
-                startActivity(intent);
-            }
+        setting.setOnClickListener(v -> {
+            Intent intent=new Intent(options_page.this, setting_pg.class);
+            startActivity(intent);
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(page7.this,com.example.trail2.View_qr.class);
-                startActivity(intent);
+        btn2.setOnClickListener(v -> {
+            Intent intent=new Intent(options_page.this, View_qr.class);
+            startActivity(intent);
 
-            }
         });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btn3.setOnClickListener(v -> {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(page7.this);
-                builder.setView(R.layout.pop_up2);
+            AlertDialog.Builder builder = new AlertDialog.Builder(options_page.this);
+            builder.setView(R.layout.pop_up2);
 
-                // Create and show the dialog
-                AlertDialog dialog = builder.create();
-                dialog.show();
+            // Create and show the dialog
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
-                // Access the ImageView in the dialog layout
-                ImageView imageView = dialog.findViewById(R.id.imageView1);
-                if (imageView != null) {
-                    // Set the image resource
-                    imageView.setImageResource(R.drawable.strict);
-                }
-
+            // Access the ImageView in the dialog layout
+            ImageView imageView = dialog.findViewById(R.id.imageView1);
+            if (imageView != null) {
+                // Set the image resource
+                imageView.setImageResource(R.drawable.strict);
             }
+
         });
 
         // Check if the WRITE_EXTERNAL_STORAGE permission is granted

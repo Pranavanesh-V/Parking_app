@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-public class MainActivity extends AppCompatActivity {
+public class intro_page extends AppCompatActivity {
 
     ViewPager mSlideViewPager;
 
@@ -28,36 +28,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.intro_pages);
 
         skip=findViewById(R.id.skip);
         Start=findViewById(R.id.Start);
         Start.setVisibility(View.INVISIBLE);
-        skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        skip.setOnClickListener(v -> {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setView(R.layout.pop_up);
+            AlertDialog.Builder builder = new AlertDialog.Builder(intro_page.this);
+            builder.setView(R.layout.pop_up);
 
-                // Create and show the dialog
-                AlertDialog dialog = builder.create();
-                dialog.show();
+            // Create and show the dialog
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
-                // Access the ImageView in the dialog layout
-                ImageView imageView = dialog.findViewById(R.id.imageView);
-                if (imageView != null) {
-                    // Set the image resource
-                    imageView.setImageResource(R.drawable.pop);
-                }
+            // Access the ImageView in the dialog layout
+            ImageView imageView = dialog.findViewById(R.id.imageView);
+            if (imageView != null) {
+                // Set the image resource
+                imageView.setImageResource(R.drawable.pop);
             }
         });
-        Start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, page6.class);
-                startActivity(intent);
-            }
+        Start.setOnClickListener(v -> {
+            Intent intent=new Intent(intro_page.this, login_page.class);
+            startActivity(intent);
         });
 
 
@@ -80,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             //if app was opened for the first time
-            Intent intent=new Intent(MainActivity.this,page6.class);
+            Intent intent=new Intent(intro_page.this, login_page.class);
             startActivity(intent);
         }
         else

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/page7.Trail2"
-    tools:context=".page7">
+    tools:context=".options_page">
 
 
     <androidx.viewpager.widget.ViewPager
