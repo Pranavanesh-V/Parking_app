@@ -9,6 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class login_page extends AppCompatActivity {
 
     Button button;
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        System.exit(0);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
